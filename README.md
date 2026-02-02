@@ -2,7 +2,7 @@
 
 ## 📘 Overview
 This project analyzes sales data from a global pharmaceutical manufacturing company to evaluate performance across **regions, distributors, products, and sales teams**. The objective is to transform raw distributor-level sales data into actionable insights using **Power BI** for business and sales decision-making.
-
+👉 **Download the data file from this link:**  https://drive.google.com/file/d/1OlhJlkcGrPeVWjyLM7ya3UGMVZd_afM7/view?usp=sharing
 ---
 
 ## ✨ Key Features
