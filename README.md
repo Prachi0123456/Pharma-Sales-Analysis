@@ -1,42 +1,56 @@
-# 💊 Pharmaceutical Sales Analytics | SQL & Power BI
+# 💊 Pharmaceutical Sales Analytics | Power BI
 
-This project analyzes pharmaceutical sales data to evaluate performance across **regions, distributors, products, and sales teams**. SQL is used for data querying and KPI extraction, while Power BI is used to build interactive dashboards for business decision-making.
-
----
-
-## 📌 Project Overview
-
-The pharmaceutical company operates through a distributor-based sales model across multiple international markets. Sales data is shared in CSV format, enabling analysis at both distributor and retail levels.
-
-The objective of this project is to perform **end-to-end sales analysis**—from data extraction and aggregation using SQL to visualization and insight delivery using Power BI.
+## 📘 Overview
+This project analyzes sales data from a global pharmaceutical manufacturing company to evaluate performance across **regions, distributors, products, and sales teams**. The objective is to transform raw distributor-level sales data into actionable insights using **Power BI** for business and sales decision-making.
 
 ---
 
-## 🛠️ Tools Used
+## ✨ Key Features
+⚡ Built using **Power BI Desktop**  
+⚡ Data transformation and modeling with **Power Query Editor**  
+⚡ Published via **Power BI Service** for web-based access (no login required)  
+⚡ **Multi-page interactive dashboards** for detailed analysis and insights  
 
-- **SQL Server** — For querying transactional data, aggregations, KPIs, and trend analysis  
+---
 
+## 🌍 Business Context
+The organization operates across multiple international markets and follows a **distributor-based sales model**. Rather than selling directly to customers, the company collaborates with regional distributors who periodically share sales data in CSV format.
 
-- **Power BI Desktop** — For interactive dashboards and business reporting  
- 
+This analysis focuses on improving visibility into **retail-level performance**, with one of the studied regions covering **Germany and Poland** as part of the broader global footprint.
 
-- **Power Query** — For data cleaning and transformation within Power BI  
+---
 
-- **Excel / CSV** — Raw distributor-level sales dataset  
-  
+## 🎯 Objectives
+The analysis was designed to meet the needs of multiple stakeholders:
+
+### 🧑‍💼 Executive Leadership
+- High-level overview of overall sales performance  
+- Trends by year and month  
+- Identification of top drug classes, products, and customer cities  
+
+### 📊 Sales Managers & Representatives
+- Distributor-wise and product-wise sales analysis  
+- Top-performing products, customers, and cities  
+- Channel and sub-channel contribution insights  
+
+### 🏷️ Head of Sales
+- Sales performance by sales teams and managers  
+- Product and product-class contribution by team  
+- Flexible filtering by **year and month**  
 
 ---
 
 ## 📂 Dataset Description
+The dataset is consolidated from multiple distributors and represents **wholesale-to-retail pharmaceutical sales data**.
 
-The dataset contains wholesale-to-retail pharmaceutical sales transactions with the following attributes:
-
-| Column Name | Description |
-|------------|------------|
+| Field Name | Description |
+|----------|-------------|
 | `Distributor` | Name of the wholesaler |
 | `Customer Name` | Name of the customer |
 | `City` | Customer city |
 | `Country` | Customer country |
+| `Latitude` | Geographic latitude |
+| `Longitude` | Geographic longitude |
 | `Channel` | Buyer type (Hospital, Pharmacy) |
 | `Sub-channel` | Buyer sector (Government, Private, etc.) |
 | `Product Name` | Name of the drug |
@@ -52,43 +66,57 @@ The dataset contains wholesale-to-retail pharmaceutical sales transactions with 
 
 ---
 
-## ❓ Business Questions Answered Using SQL
+## 🔍 Analysis Approach
 
-### ✅ Basic Analysis
-1. Total sales, quantity, and revenue trends  
-2. Sales distribution by product class and channel  
-3. Monthly and yearly sales summary  
-4. Top-performing products by sales and quantity  
-5. Customers with single vs repeat purchases  
-
-### 🔁 Intermediate Analysis
-1. Sales and revenue by region and distributor  
-2. Product and product-class performance comparison  
-3. Channel and sub-channel contribution analysis  
-4. Profitability trends by product category  
-5. Sales team contribution by region  
-
-### 🔍 Advanced Analysis
-1. Month-over-month growth using `LAG()`  
-2. Top-performing products by region using `RANK()`  
-3. Identification of low-performing products  
-4. Sales trend analysis across time periods  
-5. Sales team performance ranking and contribution analysis  
+### 🧪 Exploratory Data Analysis (EDA)
+Initial data exploration was performed using **Python (Pandas)** to assess data quality and structure. This included:
+- Checking for missing or inconsistent values  
+- Identifying outliers and invalid entries (e.g., negative sales)  
+- Classifying categorical and numerical variables  
+- Reviewing value distributions and ranges  
 
 ---
 
-## 📊 Dashboards & Insights
+### 🧹 Data Cleaning & Transformation
+Data preparation was carried out using **Power Query Editor**, where:
+- Column names were standardized  
+- Appropriate data types were assigned  
+- The dataset was validated for reporting readiness  
 
-Power BI dashboards were created to support different stakeholder needs:
-
-- **Executive Summary** – High-level KPIs, trends, and top-performing products and regions  
-- **Distributor & Customer Analysis** – Sales breakdown by distributors, customers, channels, and products  
-- **Sales Team Performance** – Comparative analysis across sales teams, managers, and product classes  
-
-All dashboards include **interactive slicers and drill-downs** for flexible analysis.
+Only minimal corrections were required due to the overall cleanliness of the data.
 
 ---
 
-## 🚀 Outcome
+### 🧩 Data Modeling
+The flat dataset was redesigned into a **star schema**, separating **fact** and **dimension** tables. This structure improves performance and enables efficient slicing and drill-down analysis across multiple business dimensions.
 
-This project demonstrates a complete **analytics workflow**, combining **SQL-based data extraction** with **Power BI visualization** to deliver actionable insights. It reflects practical, real-world business analytics focused on clarity, performance tracking, and decision support.
+---
+
+## 📊 Dashboard Development
+Three interactive report pages were developed in **Power BI Desktop**:
+
+### 1️⃣ Executive Summary
+- Overall sales KPIs and trends  
+- Quick view of top-performing products and regions  
+
+### 2️⃣ Distributor & Customer Analysis
+- Sales contribution by distributors and customers  
+- Drill-down to product-level performance  
+
+### 3️⃣ Sales Team Performance
+- Comparative analysis across sales teams and managers  
+- Product and product-class contribution insights  
+
+All dashboards include **interactive slicers** for filtering by **year and month**.
+
+---
+
+## 🚀 How to Access the Report
+
+### 🌐 Web Access (Recommended)
+The dashboard is published via **Power BI Service** and can be accessed through a read-only web link, providing full interactivity without requiring a Power BI login.
+
+### 💻 Local Access
+The `.pbix` file can be downloaded and opened in **Power BI Desktop**. It contains the complete transformed dataset and data model, allowing further customization or experimentation.
+
+---
