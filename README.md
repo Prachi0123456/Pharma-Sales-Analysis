@@ -120,7 +120,7 @@ The dashboard is published via **Power BI Service** and can be accessed through 
 The `.pbix` file can be downloaded and opened in **Power BI Desktop**. It contains the complete transformed dataset and data model, allowing further customization or experimentation.
 
 ### 📂 Dataset Access
-The dataset can be downloaded from the link below.
-https://drive.google.com/file/d/1OlhJlkcGrPeVWjyLM7ya3UGMVZd_afM7/view?usp=sharing
+To download the dataset, **[click here](https://drive.google.com/file/d/1OlhJlkcGrPeVWjyLM7ya3UGMVZd_afM7/view?usp=sharing)**.
+
 
 ---
